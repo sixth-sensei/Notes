@@ -28,9 +28,9 @@ _syntax:_
 
 ```
  time = 0
-	while time <= 10: //specifies the condition for the loop to run
-		print(time)
-		time = time + 2
+ while time <= 10: //specifies the condition for the loop to run
+    print(time)
+	time = time + 2
 ```
 
 unlike for loops, variables in while loops are set outside of the loop header
@@ -41,14 +41,14 @@ _syntax:_
 
 ```
  while True:
-	passwd = input("Enter a password: ")
-		if len(passwd) < 8:
-			print("- Password too short")
-			continue
-		else:
-			break
+    passwd = input("Enter a password: ")
+    if len(passwd) < 8:
+      print("- Password too short")
+      continue
+	else:
+      break
 
-	//the program keeps looping until the user enters a password that is 8 or more in length before the break statement executes
+ //the program keeps looping until the user enters a password that is 8 or more in length before the break statement executes
 
 ```
 					
@@ -63,7 +63,7 @@ _syntax:_
 
 ```
  def greet_employee(): //parameter to use are included in the ()
-	print("Welcome, You are logged in!")
+    print("Welcome, You are logged in!")
 ```
 
 - A _parameter_ is an object that is included in a function definition for use in that function.
@@ -142,7 +142,7 @@ _syntax:_
 
 ```
  with open("filepath/filename.extension","r/w/a") as file:
-	file_text = file.read() or file.write("new data")
+    file_text = file.read() or file.write("new data")
  print(file_text) 
  //r indicates read, a indicates append and w indicates write; specifies what we want to do with the file
 ```
