@@ -17,8 +17,8 @@ Examples of operators:
 _syntax:_
 
 ```
-	for i in [1,2,3,4]:
-		print(i)
+ for i in [1,2,3,4]:
+	print(i)
 ```
 `range()` function generates a sequence of numbers by supplying a minimum and maximum value; if no minimum value is given, it automatically assumes 0 as starting point. it can be used with for loop.
 
@@ -27,7 +27,7 @@ _syntax:_
 _syntax:_
 
 ```
-	time = 0
+ time = 0
 	while time <= 10: //specifies the condition for the loop to run
 		print(time)
 		time = time + 2
@@ -40,13 +40,13 @@ while loop can also be used with break and continue to iterate through a conditi
 _syntax:_
 
 ```
-	while True:
-		passwd = input("Enter a password: ")
-			if len(passwd) < 8:
-				print("- Password too short")
-				continue
-			else:
-				break
+ while True:
+	passwd = input("Enter a password: ")
+		if len(passwd) < 8:
+			print("- Password too short")
+			continue
+		else:
+			break
 
 	//the program keeps looping until the user enters a password that is 8 or more in length before the break statement executes
 
@@ -62,8 +62,8 @@ There are built-in function in python e.g `print()`, `type()` etc.
 _syntax:_ 
 
 ```
-	def greet_employee(): //parameter to use are included in the ()
-		print("Welcome, You are logged in!")
+ def greet_employee(): //parameter to use are included in the ()
+	print("Welcome, You are logged in!")
 ```
 
 - A _parameter_ is an object that is included in a function definition for use in that function.
@@ -122,8 +122,8 @@ regular expressions can be used when the re module is imported into python
 _syntax:_ 
 
 ```
-	re.findall("\w+@\w+\.\w+", email_log) 
-	//this outputs all emails contained in the email log file, putting \ before the dot allows python to parse it as a string and not an operator
+ re.findall("\w+@\w+\.\w+", email_log) 
+ //this outputs all emails contained in the email log file, putting \ before the dot allows python to parse it as a string and not an operator
 ```
 
 `re.search()` allows to search through a string for certain patterns and return them
@@ -141,10 +141,10 @@ _syntax:_ `re.search("[pattern]", string)`
 _syntax:_ 
 
 ```
-	with open("filepath/filename.extension","r/w/a") as file:
-		file_text = file.read() or file.write("new data")
-	print(file_text) 
-	//r indicates read, a indicates append and w indicates write; specifies what we want to do with the file
+ with open("filepath/filename.extension","r/w/a") as file:
+	file_text = file.read() or file.write("new data")
+ print(file_text) 
+ //r indicates read, a indicates append and w indicates write; specifies what we want to do with the file
 ```
 
 - `.split()` method converts a string into a list.
