@@ -148,6 +148,7 @@ _syntax:_
 ```
 
 - `.split()` method converts a string into a list.
+
 using the previous example: `print(file_text.split())`
 
 ### Logical Operators
