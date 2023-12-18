@@ -30,7 +30,7 @@ _syntax:_
  time = 0
  while time <= 10: //specifies the condition for the loop to run
     print(time)
-	time = time + 2
+    time = time + 2
 ```
 
 unlike for loops, variables in while loops are set outside of the loop header
@@ -45,7 +45,7 @@ _syntax:_
     if len(passwd) < 8:
       print("- Password too short")
       continue
-	else:
+    else:
       break
 
  //the program keeps looping until the user enters a password that is 8 or more in length before the break statement executes
