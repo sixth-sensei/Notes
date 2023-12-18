@@ -15,8 +15,10 @@ Examples of operators:
 
 _syntax:_
 
-```for i in [1,2,3,4]:
-	print(i)
+```
+	for i in [1,2,3,4]:
+		print(i)
+
 ```
 `range()` function generates a sequence of numbers by supplying a minimum and maximum value; if no minimum value is given, it automatically assumes 0 as starting point. it can be used with for loop.
 
@@ -24,10 +26,12 @@ _syntax:_
 
 _syntax:_
 
-```time = 0
-		while time <= 10: //specifies the condition for the loop to run
-			print(time)
-			time = time + 2
+```
+	time = 0
+	while time <= 10: //specifies the condition for the loop to run
+		print(time)
+		time = time + 2
+
 ```
 
 unlike for loops, variables in while loops are set outside of the loop header
@@ -35,15 +39,17 @@ unlike for loops, variables in while loops are set outside of the loop header
 while loop can also be used with break and continue to iterate through a condition until it is true then break out of it.
 _syntax:_
 
-```while True:
-				passwd = input("Enter a password: ")
-				if len(passwd) < 8:
-					print("- Password too short")
-					continue
-				else:
-					break
+```
+	while True:
+		passwd = input("Enter a password: ")
+			if len(passwd) < 8:
+				print("- Password too short")
+				continue
+			else:
+				break
 
-		//the program keeps looping until the user enters a password that is 8 or more in length before the break statement executes
+	//the program keeps looping until the user enters a password that is 8 or more in length before the break statement executes
+
 ```
 					
 ### Functions
@@ -53,8 +59,10 @@ Functions are section of codes that can be reused in a program, it improves prog
 
 _syntax:_ 
 
-```def greet_employee(): //parameter to use are included in the ()
+```
+	def greet_employee(): //parameter to use are included in the ()
 		print("Welcome, You are logged in!")
+
 ```
 
 A _parameter_ is an object that is included in a function definition for use in that function
@@ -73,7 +81,7 @@ An _argument_ is the data brought into a function when it is called
 
 _A type error is an error that results from using the wrong data type_
 _A string variable can also be reassigned to an intentional variable_
-- """ """ is used to print multiple lines of strings, saame function as using \n to print on a new line.
+""" """ is used to print multiple lines of strings, saame function as using \n to print on a new line.
 
 ### Methods
 
@@ -106,10 +114,12 @@ regular expressions can be used when the re module is imported into python
 
 `re.findall()` returns a list of matches to a regular expression
  
- _syntax:_ 
+_syntax:_ 
 
-```re.findall("\w+@\w+\.\w+", email_log) 
+```
+	re.findall("\w+@\w+\.\w+", email_log) 
 	//this outputs all emails contained in the email log file, putting \ before the dot allows python to parse it as a string and not an operator
+
 ```
 
 `re.search()` allows to search through a string for certain patterns and return them
@@ -126,7 +136,8 @@ _syntax:_ `re.search("[pattern]", string)`
 
 _syntax:_ 
 
-```with open("filepath/filename.extension","r/w/a") as file:
+```
+	with open("filepath/filename.extension","r/w/a") as file:
 		file_text = file.read() or file.write("new data")
 	print(file_text) 
 	//r indicates read, a indicates append and w indicates write; specifies what we want to do with the file
