@@ -1,6 +1,7 @@
 ### Comparison Operators
 
 Comparison operators are often used with conditional statements like if statement
+
 Examples of operators:
 - greater than >
 - less than <
@@ -18,7 +19,6 @@ _syntax:_
 ```
 	for i in [1,2,3,4]:
 		print(i)
-
 ```
 `range()` function generates a sequence of numbers by supplying a minimum and maximum value; if no minimum value is given, it automatically assumes 0 as starting point. it can be used with for loop.
 
@@ -31,12 +31,12 @@ _syntax:_
 	while time <= 10: //specifies the condition for the loop to run
 		print(time)
 		time = time + 2
-
 ```
 
 unlike for loops, variables in while loops are set outside of the loop header
 
 while loop can also be used with break and continue to iterate through a condition until it is true then break out of it.
+
 _syntax:_
 
 ```
@@ -54,7 +54,9 @@ _syntax:_
 					
 ### Functions
 
-Functions are section of codes that can be reused in a program, it improves program efficiency. There are built-in function in python e.g `print()`, `type()` etc.
+Functions are section of codes that can be reused in a program, it improves program efficiency.
+There are built-in function in python e.g `print()`, `type()` etc.
+
 `def` is used to start a function
 
 _syntax:_ 
@@ -62,11 +64,11 @@ _syntax:_
 ```
 	def greet_employee(): //parameter to use are included in the ()
 		print("Welcome, You are logged in!")
-
 ```
 
-A _parameter_ is an object that is included in a function definition for use in that function
-An _argument_ is the data brought into a function when it is called
+- A _parameter_ is an object that is included in a function definition for use in that function.
+- An _argument_ is the data brought into a function when it is called.
+
 `return` is used to return information from a function
 
 **Built in Functions**
@@ -80,7 +82,9 @@ An _argument_ is the data brought into a function when it is called
 - `type()` is a function used to return the data type of its input
 
 _A type error is an error that results from using the wrong data type_
-_A string variable can also be reassigned to an intentional variable_
+
+_A string variable can also be reassigned to an intentional variable_.
+
 """ """ is used to print multiple lines of strings, saame function as using \n to print on a new line.
 
 ### Methods
@@ -103,7 +107,8 @@ Lists allows a variable to store multiple pieces and data of different types (i.
 
 _syntax:_ `my_list = ["a", "b", "c"]`
   
-lists are accessed using their index value like in strings i.e `my_list[1]`
+lists are accessed using their index value like in strings i.e `my_list[1]`.
+
 NB: _strings are immutable (can't be changed) but lists aren't_
 
 ### Regular expressions
@@ -119,7 +124,6 @@ _syntax:_
 ```
 	re.findall("\w+@\w+\.\w+", email_log) 
 	//this outputs all emails contained in the email log file, putting \ before the dot allows python to parse it as a string and not an operator
-
 ```
 
 `re.search()` allows to search through a string for certain patterns and return them
@@ -130,9 +134,9 @@ _syntax:_ `re.search("[pattern]", string)`
 
 ### Python for Automation (Security)
 
-`with` command handles errors and manages external resources, it is often used in file handling to automatically close a file after reading it
-`open()` is a function that opens a file
-`.read()` method converts files to strings
+- `with` command handles errors and manages external resources, it is often used in file handling to automatically close a file after reading it.
+- `open()` is a function that opens a file.
+- `.read()` method converts files to strings.
 
 _syntax:_ 
 
@@ -143,15 +147,15 @@ _syntax:_
 	//r indicates read, a indicates append and w indicates write; specifies what we want to do with the file
 ```
 
-`.split()` method converts a string into a list
+- `.split()` method converts a string into a list.
 using the previous example: `print(file_text.split())`
 
 ### Logical Operators
 
 They allow for additional control in the program flow
-`AND` - checks if two or more conditions are valid for it to be true
-`OR` - checks if either of given conditions are valid for it to be true
-`NOT` - checks if a condition is invalid for it to be true
+- `AND` - checks if two or more conditions are valid for it to be true
+- `OR` - checks if either of given conditions are valid for it to be true
+- `NOT` - checks if a condition is invalid for it to be true
 
 
 ### Modules and Libraries
@@ -161,15 +165,19 @@ They allow for additional control in the program flow
 - Emoji: used for inserting emojis
 
 To perform OS relates tasks via python - `import os;` is used
+
 `import os; print(os.popen("ls -l").read())` - this allows to interact with the linux shell parsing the 'ls -l' command
 
 ### Hashing in Python
 
 Hashes can be used in python by importing the hashlib library
-`hash = hashlib.sha256` or `hash = hashlib.new("sha256")` - initiates a new hash instance, other hashes can also be specified, to list supported hashes in all OS `print(hashlib.algorithms_guaranteed)`
-`hash.update()` - updates text/file with a specified hash
-`hash.hexdigest()` - prints a specified hash digest in hex form
-`hash.name` - prints the literal name of an hash algorithm to the terminal
+
+`hash = hashlib.sha256` or `hash = hashlib.new("sha256")` - initiates a new hash instance, other hashes can also be specified. To list supported hashes in all OS `print(hashlib algorithms_guaranteed)`
+
+- `hash.update()` - updates text/file with a specified hash
+- `hash.hexdigest()` - prints a specified hash digest in hex form
+- `hash.name` - prints the literal name of an hash algorithm to the terminal
 
 _Note:_ When opening files to hash, using `"rb"` as opening mode instead of `"r"` allows the file to be opened as binary without escaping any character
+
 If taking raw user input, make sure to encode before passing to hashlib i.e `userinput.encode()`
