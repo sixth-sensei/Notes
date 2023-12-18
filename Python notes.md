@@ -18,7 +18,7 @@ _syntax:_
 
 ```
  for i in [1,2,3,4]:
-	print(i)
+    print(i)
 ```
 `range()` function generates a sequence of numbers by supplying a minimum and maximum value; if no minimum value is given, it automatically assumes 0 as starting point. it can be used with for loop.
 
