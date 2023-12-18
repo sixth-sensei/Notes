@@ -2,34 +2,40 @@
 
 Comparison operators are often used with conditional statements like if statement
 Examples of operators:
- > - greater than
- < - less than
- >=- greater than or equals to
- <=- less than or equals to
- == - value A is equals to value B
- ! = - Evaluate whether two objects are different
+- greater than >
+- less than <
+- greater than or equals to >=
+- less than or equals to <=
+- Equals to ==: value A is equals to value B
+- Not equals to !=: Evaluate whether two objects are different
  
 ### Loops (Iterative statments)
 
 - **for Loops**: they repeat codes for a specified sequence
-  _syntax:_ 
-  		```for i in [1,2,3,4]:
-				print(i)
-		```
+
+_syntax:_
+
+```for i in [1,2,3,4]:
+	print(i)
+```
 `range()` function generates a sequence of numbers by supplying a minimum and maximum value; if no minimum value is given, it automatically assumes 0 as starting point. it can be used with for loop.
 
 - **while loops**: executes a code repeatedly based on a condition, it continues as long as a condition is true.
-  _syntax:_
-		```time = 0
-			while time <= 10: //specifies the condition for the loop to run
-				print(time)
-				time = time + 2
-				```
+
+_syntax:_
+
+```time = 0
+		while time <= 10: //specifies the condition for the loop to run
+			print(time)
+			time = time + 2
+```
+
 unlike for loops, variables in while loops are set outside of the loop header
 
 while loop can also be used with break and continue to iterate through a condition until it is true then break out of it.
-_syntax:_ 
-		```while True:
+_syntax:_
+
+```while True:
 				passwd = input("Enter a password: ")
 				if len(passwd) < 8:
 					print("- Password too short")
@@ -37,15 +43,19 @@ _syntax:_
 				else:
 					break
 
-		//the program keeps looping until the user enters a password that is 8 or more in length before the break statement executes```
+		//the program keeps looping until the user enters a password that is 8 or more in length before the break statement executes
+```
 					
 ### Functions
 
 Functions are section of codes that can be reused in a program, it improves program efficiency. There are built-in function in python e.g `print()`, `type()` etc.
 `def` is used to start a function
+
 _syntax:_ 
-		```def greet_employee(): //parameter to use are included in the ()
-			```print("Welcome, You are logged in!")
+
+```def greet_employee(): //parameter to use are included in the ()
+		print("Welcome, You are logged in!")
+```
 
 A _parameter_ is an object that is included in a function definition for use in that function
 An _argument_ is the data brought into a function when it is called
@@ -63,7 +73,7 @@ An _argument_ is the data brought into a function when it is called
 
 _A type error is an error that results from using the wrong data type_
 _A string variable can also be reassigned to an intentional variable_
-""" """ is used to print multiple lines of strings, saame function as using \n to print on a new line.
+- """ """ is used to print multiple lines of strings, saame function as using \n to print on a new line.
 
 ### Methods
 
@@ -82,7 +92,9 @@ common string methods are `.upper()`, `.lower()` and `.title()`
 ### Lists
 
 Lists allows a variable to store multiple pieces and data of different types (i.e int, string, boolean)
-  _syntax:_ `my_list = ["a", "b", "c"]`
+
+_syntax:_ `my_list = ["a", "b", "c"]`
+  
 lists are accessed using their index value like in strings i.e `my_list[1]`
 NB: _strings are immutable (can't be changed) but lists aren't_
 
@@ -91,12 +103,19 @@ NB: _strings are immutable (can't be changed) but lists aren't_
 - `\w` matches with any alphanumeric character but doesn't match symbols.
 combining `"\w+"` can be used together for more extended search
 regular expressions can be used when the re module is imported into python
+
 `re.findall()` returns a list of matches to a regular expression
+ 
  _syntax:_ 
-		```re.findall("\w+@\w+\.\w+", email_log) //this outputs all emails contained in the email log file, putting \ before the dot allows python to parse ```it as a string and not an operator
+
+```re.findall("\w+@\w+\.\w+", email_log) 
+	//this outputs all emails contained in the email log file, putting \ before the dot allows python to parse it as a string and not an operator
+```
 
 `re.search()` allows to search through a string for certain patterns and return them
- _syntax:_ `re.search("[pattern]", string)`
+
+_syntax:_ `re.search("[pattern]", string)`
+
 `re.compile()` allows to make a character set or define a pattern to pass as an argument
 
 ### Python for Automation (Security)
@@ -106,10 +125,12 @@ regular expressions can be used when the re module is imported into python
 `.read()` method converts files to strings
 
 _syntax:_ 
-		```with open("filepath/filename.extension","r/w/a") as file:
-				file_text = file.read() or file.write("new data")
-			print(file_text) 
-		//r indicates read, a indicates append and w indicates write; specifies 				```what we want to do with the file
+
+```with open("filepath/filename.extension","r/w/a") as file:
+		file_text = file.read() or file.write("new data")
+	print(file_text) 
+	//r indicates read, a indicates append and w indicates write; specifies what we want to do with the file
+```
 
 `.split()` method converts a string into a list
 using the previous example: `print(file_text.split())`
