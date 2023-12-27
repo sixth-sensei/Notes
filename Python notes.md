@@ -117,7 +117,7 @@ NB: _strings are immutable (can't be changed) but lists aren't_
 combining `"\w+"` can be used together for more extended search
 regular expressions can be used when the re module is imported into python
 
-`re.findall()` returns a list of matches to a regular expression
+- `re.findall()` returns a list of matches to a regular expression
  
 _syntax:_ 
 
@@ -126,11 +126,13 @@ _syntax:_
  //this outputs all emails contained in the email log file, putting \ before the dot allows python to parse it as a string and not an operator
 ```
 
-`re.search()` allows to search through a string for certain patterns and return them
+- `re.search()` allows to search through a string for certain patterns and return them
 
 _syntax:_ `re.search("[pattern]", string)`
 
-`re.compile()` allows to make a character set or define a pattern to pass as an argument
+- `re.compile()` allows to make a character set or define a pattern to pass as an argument
+
+_syntax:_ `regex = re.compile("pattern")`
 
 ### Python for Automation (Security)
 
@@ -167,7 +169,7 @@ They allow for additional control in the program flow
 
 To perform OS relates tasks via python - `import os;` is used
 
-`import os; print(os.popen("ls -l").read())` - this allows to interact with the linux shell parsing the 'ls -l' command
+`import os; print(os.popen("ls -l").read())` - this allows to interact with the linux shell parsing the `ls -l` command
 
 ### Hashing in Python
 
