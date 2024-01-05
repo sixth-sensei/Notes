@@ -109,6 +109,8 @@ _syntax:_ `my_list = ["a", "b", "c"]`
   
 lists are accessed using their index value like in strings i.e `my_list[1]`.
 
+Reverse order notation of a string - `[::-1]`
+
 NB: _strings are immutable (can't be changed) but lists aren't_
 
 ### Regular expressions
