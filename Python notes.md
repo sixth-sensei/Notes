@@ -186,3 +186,45 @@ Hashes can be used in python by importing the hashlib library
 _Note:_ When opening files to hash, using `"rb"` as opening mode instead of `"r"` allows the file to be opened as binary without escaping any character
 
 If taking raw user input, make sure to encode before passing to hashlib i.e `userinput.encode()`
+
+### Command Line Arguments - using `sys.argv`
+
+Command line arguments are a powerful way to pass parameters to a program when it is executed.
+
+The first item in the list is always the name of the script itself, and subsequent items are the arguments passed to the script.
+
+It is called using the `sys` library i.e `import sys`
+
+Individual Arguments can be accessed by indexing the `sys.argv` list
+
+- `sys.argv[0]` contains the name of the program/script
+- `sys.argv[1:]` contains all other arguments on the list
+
+**Using argparse**
+
+Argparse module provides more options than the `sys.argv`. It has a default optional argument -h with its long version --help
+
+_Syntax:_
+
+```
+ import argparse
+
+ //Initialize parser
+ parser = argparse.ArgumentParser(prog="Program name", description="what the program does", epilog="text at the bottom of help")
+
+ //Adding Positional arguments
+ parser.add_argument("filename", metavar="alternate display name for the argument in help", type="arg file type e.g int, str")
+
+ //Adding optional arguments
+ parser.add_argument("-o", "--Output", help ="Show Output")
+
+ //Read arguments from command line
+ args = parser.parse_args()
+
+ if args.output: //referencing the output option created earlier
+    print(f"Displaying output as: {args.output}")
+```
+_Note:_ 
+
+- Positional arguments must follow a particular order (as they were created)
+- Optional arguments are the one's you can choose to include using `-` or `--` switch
