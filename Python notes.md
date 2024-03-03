@@ -213,7 +213,7 @@ _Syntax:_
  parser = argparse.ArgumentParser(prog="Program name", description="what the program does", epilog="text at the bottom of help")
 
  //Adding Positional arguments
- parser.add_argument("filename", metavar="alternate display name for the argument in help", type="arg file type e.g int, str")
+ parser.add_argument("filename", metavar="alternate display name for the argument in help", type="arg file type e.g int, str", choices=['a restricted list to choose from for the arg'])
 
  //Adding optional arguments
  parser.add_argument("-o", "--Output", help ="Show Output")
