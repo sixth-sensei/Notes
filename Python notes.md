@@ -147,8 +147,9 @@ _syntax:_
 ```
  with open("filepath/filename.extension","r/w/a") as file:
     file_text = file.read() or file.write("new data")
- print(file_text) 
- //r indicates read, a indicates append and w indicates write; specifies what we want to do with the file
+ print(file_text)
+ file.close() // closes the instance of the file in the current program 
+ //r indicates read, a indicates append to an existing file and w indicates write to a new file; specifies what we want to do with the file
 ```
 
 - `.split()` method converts a string into a list.
