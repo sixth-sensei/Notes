@@ -2,7 +2,7 @@
 You can set the interpreter for your shell script to run on by including it in your command
 - `echo $SHELL` in terminal shows your current interpreter
 
-_syntax:_
+_Syntax:_
 
 `#!/path/to/interpreter` i.e `#!/bin/bash` or `#!/bin/sh`
 
@@ -258,7 +258,7 @@ fi
 
 It is used to filter file contents or the output of a command in such a way that we can print out the most essential parts. This is done by piping the output of a command into `awk`
 
-_Usage_
+_Usage:_
 
 - `awk '{print $1}' testfile.txt`: This prints the first index of the testfile.txt and it can be changed as we want i.e ($2, $3). It uses space as a seperator
 - `awk -F, '{print $1}' testfile.csv`: This specifies a separator using the `-F` flag, in this case a comma `,`
