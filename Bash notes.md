@@ -127,6 +127,25 @@ _Example:_ Script to check logged in user
 ```
 _NB:_ The double comma `,,` and curly braces `{}` is known as **parameter expansion** and allows to ignore upper and lower cases when comparing values
 
+- `-z` flag assumes a variable is empty by default i.e
+
+```bash
+if [ -z "$1" ]; then
+    echo "empty variable"
+else
+    echo $1
+fi
+```
+- `-n` flag assumes a variable is not empty by default
+
+```bash
+if [ -n "$1" ]; then
+    echo $1
+else
+    echo "empty variable"
+fi
+```
+
 ### Case Statements
 
 A case statement performs different actions depending on which case is true.
