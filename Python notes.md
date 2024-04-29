@@ -169,10 +169,13 @@ They allow for additional control in the program flow
 - Rich: this modules allows to customize texts and make interactions more beautiful
 - Colorama: allows use of foreground, background and styles for command line texts
 - Emoji: used for inserting emojis
+- OS: Used to execute operating system commands; can be quite handy when writing exploits in python
 
-To perform OS relates tasks via python - `import os;` is used
+To perform OS relates tasks via python in command line - `import os;` is used
 
 `import os; print(os.popen("ls -l").read())` - this allows to interact with the linux shell parsing the `ls -l` command
+
+`os.system(f"nmap -A -p- {ip}")` - Allows to run nmap command for recon on specified IP
 
 ### Hashing in Python
 
