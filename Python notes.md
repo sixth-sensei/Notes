@@ -191,6 +191,26 @@ _Note:_ When opening files to hash, using `"rb"` as opening mode instead of `"r"
 
 If taking raw user input, make sure to encode before passing to hashlib i.e `userinput.encode()`
 
+### Encryption & Decryption in Python
+
+1. Symmetric-key cryptography: This involves using the same key for encryption and decryption, to do this `Fernet` module in the `cryptography`library is used.
+
+**Steps**
+- Install the cryptography library if not already present `pip install cryptography`
+- Import the Fernet module `from cryptography.fernet import Fernet`
+- Generate a key for encryption and decryption `key = Fernet.generate_key()`
+- Start an instance of the fernet class with the generated key `fernet = Fernet(key)`
+- Encrypt the message and assign its value (the text must be encoded) `encryted_msg = fernet.encrypt(message.encode())`
+- Decrypt the encrypted message and decode its content before printing its output `decrypted_msg = fernet.decrypt(encrypted_msg).decode()`
+
+2. Asymmetric-key cryptography: This involves using different set of keys for encryption (public key) and decryption (private key); to do this `rsa` library is used.
+
+**Steps**
+- Install the rsa library if not already present `pip install rsa`
+- Generate public and private keys with `rsa.newkeys` method specifying key length as its parameter, minimum key length being 16 `pubKey, privKey = rsa.newkeys(1028)`
+- Encrypt using the public key generated with `rsa.encrypt` method (ensure the message is encoded) `encrypted_msg = rsa.encrypt(message.encode(), pubKey)`
+- Decrypt using the private key generated with `rsa.decrypt` method and decode before printig final output `rsa.decrypt(encrypted_msg, privKey).decode()`
+
 ### Command Line Arguments - using `sys.argv`
 
 Command line arguments are a powerful way to pass parameters to a program when it is executed.
