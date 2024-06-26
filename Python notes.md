@@ -85,7 +85,7 @@ _A type error is an error that results from using the wrong data type_
 
 _A string variable can also be reassigned to an intentional variable_.
 
-""" """ is used to print multiple lines of strings, saame function as using \n to print on a new line.
+""" """ is used to print multiple lines of strings, same function as using \n to print on a new line.
 
 ### Methods
 
@@ -193,7 +193,7 @@ If taking raw user input, make sure to encode before passing to hashlib i.e `use
 
 ### Encryption & Decryption in Python
 
-1. Symmetric-key cryptography: This involves using the same key for encryption and decryption, to do this `Fernet` module in the `cryptography`library is used.
+1. Symmetric-key cryptography: This involves using the same key for encryption and decryption, to do this `Fernet` module in the `cryptography` library is used.
 
 **Steps**
 - Install the cryptography library if not already present `pip install cryptography`
